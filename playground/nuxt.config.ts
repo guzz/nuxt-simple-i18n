@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     MyModule
   ],
   i18n: {
-    availableLocales: ['en', 'pt-BR', 'es'],
+    availableLocales: ['en', 'pt', 'es'],
     defaultLocale: 'en'
   }
 })

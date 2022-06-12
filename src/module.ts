@@ -4,6 +4,7 @@ import { name, version } from '../package.json'
 export interface ModuleOptions {
   availableLocales: string[]
   defaultLocale: string
+  routePrefix: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -14,7 +15,8 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {
     availableLocales: [],
-    defaultLocale: ''
+    defaultLocale: '',
+    routePrefix: 'locale-'
   },
   setup (options, nuxt) {
     nuxt.hook('pages:extend', (pages) => {
@@ -33,7 +35,7 @@ export default defineNuxtModule<ModuleOptions>({
         const newRoute = {
           // eslint-disable-next-line no-useless-escape
           path: `/:locale(\[A-Z a-z]{2}\)${r.path}`,
-          name: `locale-${r.name.toString()}`,
+          name: `${options.routePrefix}${r.name.toString()}`,
           file: resolve(__dirname, `pages/${filePath}.vue`),
           children: r.children
         }
@@ -44,7 +46,8 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin(resolve('./runtime/plugin'))
     nuxt.options.runtimeConfig.public.i18n = {
       availableLocales: options.availableLocales,
-      defaultLocale: options.defaultLocale
+      defaultLocale: options.defaultLocale,
+      routePrefix: options.routePrefix
     }
   }
 })
