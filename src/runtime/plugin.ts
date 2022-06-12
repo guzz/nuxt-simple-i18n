@@ -108,7 +108,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
     if (typeof rawRoute === 'string') {
       return getPath(rawRoute)
-    } else if (!(rawRoute instanceof String)) {
+    } else {
       const name = rawRoute?.name ? getName(rawRoute.name) : undefined
       const path = rawRoute?.path ? getPath(rawRoute.path) : undefined
       const query = rawRoute?.query
