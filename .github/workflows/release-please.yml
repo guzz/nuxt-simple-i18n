@@ -12,3 +12,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: nuxt-simple-i18n
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
+      - name: Instal dependencies
+        run: yarn install --frozen-lockfile
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Run tests
+        run: yarn test
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: playwright-report
+          path: playwright-report
+      - name: Publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
