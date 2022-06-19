@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.6](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.5...v0.9.6) (2022-06-19)
+
+
+### Bug Fixes
+
+* **ci:** Build step ([6c040b6](https://github.com/guzz/nuxt-simple-i18n/commit/6c040b66dce383f4390c809cf415cfa6416cacf2))
+* **ci:** Github bot problem ([e3ef719](https://github.com/guzz/nuxt-simple-i18n/commit/e3ef719f1b241fc56cf7411463ba785b4f7f829b))
+* **ci:** Remove build and publish steps ([8fa74f3](https://github.com/guzz/nuxt-simple-i18n/commit/8fa74f30f4918f851d44cdee98054e9af93feca7))
+
 ## 0.9.5 (2022-06-19)
 
 
