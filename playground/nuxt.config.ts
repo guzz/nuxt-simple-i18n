@@ -1,4 +1,3 @@
-import path from 'path'
 import { defineNuxtConfig } from 'nuxt'
 import MyModule from '..'
 
