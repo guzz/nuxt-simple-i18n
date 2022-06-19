@@ -11,7 +11,10 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name,
     version,
-    configKey: 'i18n'
+    configKey: 'i18n',
+    compatibility: {
+      nuxt: '^3.0.0'
+    }
   },
   defaults: {
     availableLocales: [],
@@ -35,7 +38,7 @@ export default defineNuxtModule<ModuleOptions>({
         const newRoute = {
           // eslint-disable-next-line no-useless-escape
           path: `/:locale(\[A-Z a-z]{2}\)${r.path}`,
-          name: `${options.routePrefix}${r.name.toString()}`,
+          name: `${options.routePrefix}${(r.name || 'unamed').toString()}`,
           file: r.file,
           children: r.children
         }
