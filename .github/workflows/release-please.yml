@@ -18,6 +18,8 @@ jobs:
           node-version: '14.x'
       - name: Instal dependencies
         run: yarn install --frozen-lockfile
+      - name: Build test env
+        run: yarn dev:build
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Run tests
