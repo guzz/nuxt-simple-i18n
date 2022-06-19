@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.8](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.7...v0.9.8) (2022-06-19)
+
+
+### Bug Fixes
+
+* Add imports to plugin ([9442cd2](https://github.com/guzz/nuxt-simple-i18n/commit/9442cd2073c1ef39254be5bf45bf3fbc1a3cb046))
+
 ## [0.9.7](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.6...v0.9.7) (2022-06-19)
 
 
