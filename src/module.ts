@@ -36,7 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
           // eslint-disable-next-line no-useless-escape
           path: `/:locale(\[A-Z a-z]{2}\)${r.path}`,
           name: `${options.routePrefix}${r.name.toString()}`,
-          file: resolve(__dirname, `pages/${filePath}.vue`),
+          file: r.file,
           children: r.children
         }
         pages.push(newRoute)
