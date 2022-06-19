@@ -118,12 +118,18 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (!isDefaultLocale) {
         params.locale = locale.value
       }
-      return {
+      const response = {
         name,
         path,
         query,
         params
       }
+      Object.keys(response).forEach((prop) => {
+        if (!response[prop]) {
+          delete response[prop]
+        }
+      })
+      return response
     }
   }
 
