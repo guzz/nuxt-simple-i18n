@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.7](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.6...v0.9.7) (2022-06-19)
+
+
+### Bug Fixes
+
+* Nuxt compatibility ([dd131a6](https://github.com/guzz/nuxt-simple-i18n/commit/dd131a67ab966981bce8091fd5a1c66ef65c776a))
+
 ## [0.9.6](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.5...v0.9.6) (2022-06-19)
 
 
