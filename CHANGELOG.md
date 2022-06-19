@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.6](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.5...v0.9.6) (2022-06-19)
+
+
+### Bug Fixes
+
+* **ci:** Build step ([6c040b6](https://github.com/guzz/nuxt-simple-i18n/commit/6c040b66dce383f4390c809cf415cfa6416cacf2))
+
 ## 0.9.5 (2022-06-19)
 
 
