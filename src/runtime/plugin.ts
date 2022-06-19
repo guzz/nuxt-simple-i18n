@@ -1,4 +1,5 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig, useRoute, useRouter, useState } from '#app'
+import { watch, computed } from 'vue'
 import type { RouteLocationRaw, LocationQueryRaw, RouteParamsRaw } from 'vue-router'
 
 interface LocaleRouteRaw {
