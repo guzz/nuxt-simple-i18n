@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/guzz/nuxt-simple-i18n/compare/v0.10.0...v0.11.0) (2022-06-25)
+
+
+### Features
+
+* CI Update ([86e3311](https://github.com/guzz/nuxt-simple-i18n/commit/86e3311faa87664673f982fcedd0adbfe55cea63))
+
 ## [0.10.0](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.8...v0.10.0) (2022-06-25)
 
 
