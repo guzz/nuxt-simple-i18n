@@ -9,6 +9,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '17.x'
+          registry-url: 'https://registry.npmjs.org'
       - name: Install yarn
         run: npm install --global yarn
       - name: Install dependenciessss
@@ -27,6 +28,6 @@ jobs:
       - name: Build module
         run: yarn prepack
       - name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
