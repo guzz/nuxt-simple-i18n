@@ -2,6 +2,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .github/**/*
+      - src/**/*
+      - test/**/*
+      - yarn.lock
 name: release-please
 jobs:
   release-please:
