@@ -1,0 +1,27 @@
+on:
+  push:
+    tags:
+      - '*'
+name: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '17.x'
+      - name: Install yarn
+        run: npm install --global yarn
+      - name: Install dependenciessss
+        run: yarn install --frozen-lockfile
+      - name: Prepare test env
+        run: yarn dev:prepare
+      - name: Build test env
+        run: yarn dev:build
+      - name: Build module
+        run: yarn prepack
+      - name: Publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
