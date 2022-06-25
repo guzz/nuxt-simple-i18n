@@ -18,22 +18,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: nuxt-simple-i18n
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '17.x'
-      - name: Install yarn
-        run: npm install --global yarn
-      - name: Install dependenciessss
-        run: yarn install --frozen-lockfile
-      - name: Prepare test env
-        run: yarn dev:prepare
-      - name: Build test env
-        run: yarn dev:build
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-      - name: Run tests
-        run: yarn coverage
-      - uses: codecov/codecov-action@v2
-        with:
-          directory: ./coverage/
