@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.10.0](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.8...v0.10.0) (2022-06-25)
+
+
+### Features
+
+* Automatic publish ([dbc24eb](https://github.com/guzz/nuxt-simple-i18n/commit/dbc24ebfe57b6ac9425a3c9ff32b770021b56bbb))
+
+
+### Bug Fixes
+
+* **ci:** Fix ([fc1b13a](https://github.com/guzz/nuxt-simple-i18n/commit/fc1b13aa8e6699852d691e90fb1c9ae1cd4a71b9))
+* **publish:** Fix github actions workflow ([be5327b](https://github.com/guzz/nuxt-simple-i18n/commit/be5327b9de9366d036768f954937a3438717a7e7))
+
 ## [0.9.8](https://github.com/guzz/nuxt-simple-i18n/compare/v0.9.7...v0.9.8) (2022-06-19)
 
 
