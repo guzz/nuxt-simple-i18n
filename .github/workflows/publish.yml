@@ -17,16 +17,9 @@ jobs:
         run: yarn dev:prepare
       - name: Build test env
         run: yarn dev:build
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-      - name: Run tests
-        run: yarn coverage
-      - uses: codecov/codecov-action@v2
-        with:
-          directory: ./coverage/
       - name: Build module
         run: yarn prepack
       - name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
